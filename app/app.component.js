@@ -8,6 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require('@angular/core');
 var AppComponent = (function () {
     function AppComponent() {
+        this.color = 'red';
+        this.customers = [
+            { name: 'joel', city: 'miami' },
+            { name: 'jacob', city: 'nyc' }
+        ];
     }
     AppComponent.prototype.ngOnInit = function () {
         this.message = 'Hello World!';
@@ -15,7 +20,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'app-container',
-            template: "<h1>Hello World</h1>"
+            template: "\n<h1>{{ message }}</h1>\n<br/>\n<input type=\"text\" [(ngModel)]=\"firstName\" />\n{{ firstName }}\n<ul>\n<li *ngFor=\"let c of customers\">\n{{ c.name }} : {{ c.city }}\n</li>\n</ul>\n<pre>\n{{ customers | json }}\n</pre>\n"
         })
     ], AppComponent);
     return AppComponent;
