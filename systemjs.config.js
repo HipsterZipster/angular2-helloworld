@@ -3,7 +3,7 @@
     var ngVersion = '@2.0.0-rc.0';
 
     function npmUrl(url, version) {
-        return 'https://npmcdn.com/' + url + version;
+        return 'https://unpkg.com/' + url + version;
     }
 
     var map = {
